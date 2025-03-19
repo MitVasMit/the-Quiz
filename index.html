@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>the Quiz</title>
+  </head>
+  <body>
+    <div id="welcome-box">
+      <div id="loading-screen">
+        <div class="ring">
+          Loading
+          <span></span>
+        </div>
+      </div>
+      <div id="start-screen" style="display: none">
+        <h1 id="welcome-text">Welcome to the Quiz!</h1>
+        <p>Test your knowledge with these questions.</p>
+        <br />
+        <button id="start-btn">Start</button>
+      </div>
+      <div id="start-over" style="display: none">
+        <h1>Good Luck!</h1>
+        <button id="start-over-btn">Start Over</button>
+      </div>
+      <div
+        id="question-container"
+        class="animate__animated animate__backInDown"
+      ></div>
+      <progress
+        id="progress-bar"
+        max="20"
+        value="0"
+        style="display: none"
+      ></progress>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

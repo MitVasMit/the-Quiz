@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:wght@300&family=Pixelify+Sans&family=Playpen+Sans&family=Poppins:wght@300&family=Recursive:wght@500&family=Roboto+Mono:wght@500&family=Shantell+Sans&display=swap");
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Playpen Sans", cursive;
+  font-family: "Poppins", sans-serif;
+  font-family: "Recursive", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Shantell Sans", cursive;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  animation: scroll 100s linear infinite;
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+    #e0d7d70e;
+  color: antiquewhite;
+  height: 80vh;
+  min-width: 360px;
+  width: 98%;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+#start-screen button {
+  margin-top: 5em;
+}
+
+#start-over {
+  margin-bottom: 5em;
+}
+
+#start-over h1 {
+  letter-spacing: 0.5em;
+  word-spacing: 1em;
+  font-weight: bold;
+}
+
+p {
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: inline-block;
+  padding: 0.15em 1em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  background-color: rgba(245, 241, 241, 0.253);
+  color: black;
+}
+
+#welcome-box {
+  width: 75%;
+  padding: 1em;
+  border: 20px solid rgba(128, 128, 128, 0.288);
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+}
+
+button,
+li {
+  font-family: inherit;
+  cursor: pointer;
+  padding: 1em 2.75em;
+  border: 0px;
+  color: antiquewhite;
+  font-weight: bold;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.466);
+  font-size: 0.75em;
+  letter-spacing: 0.25em;
+}
+
+button:hover,
+li:hover {
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: rgba(231, 231, 231, 0.377);
+  color: black;
+  transition: all, 0.5s;
+}
+
+button:not(:hover),
+li:not(:hover) {
+  transition: all, 0.5s;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+  cursor: pointer;
+  margin: 1em;
+}
+
+#progress-bar {
+  margin: 0 auto;
+  height: 1.5em;
+  background-color: rgba(255, 255, 255, 0.336);
+}
+
+progress::-webkit-progress-value {
+  background: rgba(255, 246, 246, 0.562);
+  border-radius: 20px;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid #3c3c3c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: grey;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px grey;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.ring:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+
+span:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: black;
+  top: -10px;
+  right: -10px;
+  box-shadow: 0 0 20px black;
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes scroll {
+  100% {
+    background-position: 0px -400%;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .wrapper {
+    animation: scroll 800s linear infinite;
+  }
+}
+
+@media (min-width: 670px) {
+  .title {
+    font-size: 5rem;
+  }
+}
